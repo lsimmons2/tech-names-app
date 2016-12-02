@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NameContainer from './name-container';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import actions from '../redux/actions';
+import actions from '../actions';
 import UserInfo from './user-info';
 
 class App extends Component {
@@ -13,6 +13,7 @@ class App extends Component {
         < UserInfo
           user={this.props.user}
           createNewUserId={this.props.actions.createNewUserId}
+          actions={this.props.actions}
         />
         < NameContainer
           addName={this.props.actions.addName}

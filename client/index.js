@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './components/app';
 import './style/main.scss';
-import configureStore from './redux/store';
+import configureStore from './store';
 import { Provider } from 'react-redux';
 
 // here you'll create and configure our store
