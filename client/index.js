@@ -14,7 +14,11 @@ let initialState = {
       real: false,
       name: 'sahster'
     }
-  ]
+  ],
+  user: {
+    username: 'sah brah',
+    id: 9
+  }
 }
 
 let store = configureStore(initialState);

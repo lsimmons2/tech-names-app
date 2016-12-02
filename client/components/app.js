@@ -3,13 +3,17 @@ import NameContainer from './name-container';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from '../redux/actions';
-
+import UserInfo from './user-info';
 
 class App extends Component {
   render(){
     return (
       <div id="header">
-        Guess the tech names
+        <h2>Guess the tech names</h2>
+        < UserInfo
+          user={this.props.user}
+          createNewUserId={this.props.actions.createNewUserId}
+        />
         < NameContainer
           addName={this.props.actions.addName}
           actions={this.props.actions}
