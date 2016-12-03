@@ -1,11 +1,12 @@
 import { combineReducers } from 'redux';
-import nameReducer from './names-reducer';
-import userReducer from './user-reducer';
-
+import rightReducer from './right-reducer';
+import wrongReducer from './wrong-reducer';
+import unguessedReducer from './unguessed-reducer';
 
 const rootReducer = combineReducers({
-  names: nameReducer,
-  user: userReducer
+  unguessed: unguessedReducer,
+  right: rightReducer,
+  wrong: wrongReducer
 })
 
 export default rootReducer

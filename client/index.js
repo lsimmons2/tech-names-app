@@ -5,20 +5,27 @@ import './style/main.scss';
 import configureStore from './store';
 import { Provider } from 'react-redux';
 
-// here you'll create and configure our store
-// use the createStore() method with the initialState and reducers
 let initialState = {
-  names: [
+  unguessed: [
     {
-      id: 0,
-      real: false,
-      name: 'sahster'
-    }
+      real: {
+        name: 'Vuvuzela'
+      },
+      notReal: {
+        name: 'Bonanza.js'
+      }
+    }//,
+    // {
+    //   real: {
+    //     name: 'Mongoose'
+    //   },
+    //   notReal: {
+    //     name: 'Porcupine'
+    //   }
+    // }
   ],
-  user: {
-    username: 'sah brah',
-    id: 9
-  }
+  right: [],
+  wrong: []
 }
 
 let store = configureStore(initialState);

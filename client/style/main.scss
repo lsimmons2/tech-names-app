@@ -1,3 +1,24 @@
-#header {
-  color: blue;
+#app {
+
+  font-family: 'Bungee', cursive;
+
+  #header-container {
+    width: 50%;
+    margin: 50px auto 80px;
+    text-align: center;
+  }
+
+  .inner-name-container {
+
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      // border: 20px solid red;
+      color: #e65050;
+    }
+
+  }
+
 }

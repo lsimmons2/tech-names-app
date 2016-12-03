@@ -1,51 +1,65 @@
 let actions = {
 
-  addName: function(name){
+  addRight: function(pair){
     return {
-      type: 'ADD_NAME',
-      name: name
+      type: 'GUESSED',
+      pair: pair
     }
   },
 
-  completeName: function(id){
+  addWrong: function(pair){
     return {
-      type: 'COMPLETE_NAME',
-      id: id
-    }
-  },
-
-  deleteName: function(id){
-    return {
-      type: 'DELETE_NAME',
-      id: id
-    }
-  },
-
-  createNewUserId: function(){
-    return {
-      type: 'CREATE_USER_ID',
-      id: Math.round(Math.random()*100)
-    }
-  },
-
-  createNewUserIdIfOdd: function(){
-    return (dispatch, getState) => {
-      const { user } = getState();
-      if(user.id % 2 === 0){
-        return;
-      }
-      return dispatch(actions.createNewUserId());
-    }
-  },
-
-  createNewUserAsyc(){
-    return dispatch => {
-      setTimeout( () => {
-        dispatch(actions.createNewUserId())
-      }, 2500)
-
+      type: 'GUESSED',
+      pair: pair
     }
   }
+
+  // addName: function(name){
+  //   return {
+  //     type: 'ADD_NAME',
+  //     name: name
+  //   }
+  // },
+  //
+  // completeName: function(id){
+  //   return {
+  //     type: 'COMPLETE_NAME',
+  //     id: id
+  //   }
+  // },
+  //
+  // deleteName: function(id){
+  //   return {
+  //     type: 'DELETE_NAME',
+  //     id: id
+  //   }
+  // },
+  //
+  // createNewUserId: function(){
+  //   return {
+  //     type: 'CREATE_USER_ID',
+  //     id: Math.round(Math.random()*100)
+  //   }
+  // },
+  //
+  // createNewUserIdIfOdd: function(){
+  //   return (dispatch, getState) => {
+  //     const { user } = getState();
+  //     if(user.id % 2 === 0){
+  //       return;
+  //     }
+  //     return dispatch(actions.createNewUserId());
+  //   }
+  // },
+  //
+  // createNewUserAsyc(){
+  //   return dispatch => {
+  //     setTimeout( () => {
+  //       dispatch(actions.createNewUserId())
+  //     }, 2500)
+  //
+  //   }
+  // }
 
 
 }

@@ -9,6 +9,21 @@ let finalCreateStore = compose(
   applyMiddleware(thunk, logger())
 )(createStore)
 
-export default function configureStore(initialState = { names: [] }){
+let defInitialState = {
+  unguessed: [
+    {
+      real: {
+        name: 'Vuvuzela'
+      },
+      notReal: {
+        name: 'Bonanza.js'
+      }
+    }
+  ],
+  right: [],
+  wrong: []
+}
+
+export default function configureStore(initialState = defInitialState){
   return finalCreateStore(rootReducer, initialState)
 }

@@ -1,5 +1,3 @@
-mocha
-chai
 hubot
 inferno
 neo
@@ -11,11 +9,11 @@ gulp
 sass
 blox
 knit
-sangria
 hokusai
 winston
 morgan
 galileo
 meteor
-cucumber
 lua
+boomerang
+snowflake
